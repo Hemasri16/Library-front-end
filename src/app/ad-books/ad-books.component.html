@@ -1,0 +1,48 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Books</h2>
+    </div>
+  <!-- nav -->
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav">
+      
+        
+        <a class="nav-item nav-link" routerLink="/add-books">Add Books</a>
+    </div>
+  </nav>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th> Book Name</th>
+              <th>Author</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Rackno</th>
+              <th>Status</th>
+              <th>Actions</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let books of books | async">
+               <td>{{books.bookid}}</td>
+              <td>{{books.name}}</td>
+              <td>{{books.author}}</td>
+              <td>{{books.category}}</td>
+              <td>{{books.price}}</td>
+              <td>{{books.rackno}}</td>
+              <td>{{books.status}}</td>
+
+              <td><button (click)="updateBooks(books.bookid)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="deleteBooks(books.bookid)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+
+                   
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

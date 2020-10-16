@@ -1,0 +1,39 @@
+<div style="width:100%;height:200%;background-image: url('assets/image/pexels-rafael-cosquiere-2041540.jpg');">
+<br>
+<div class="container" style="max-width: 600px;background-color: azure;">
+    <h2 class="textual">User Registration</h2>
+    
+    <form #Registerform ="ngForm"(ngSubmit)="registerUser()">
+      <small class="text-success">{{msg}}</small>
+      <div class="form-group">
+        <label class="control-label col-sm-6" for="username">Username:</label>
+        <div class="col-sm-10">
+          <input type="username" class="form-control" id="username"placeholder="Enter username" name="username"  [(ngModel)]="user.username" required #username="ngModel"
+          [class.is-invalid]="username.invalid && username.touched">
+          <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is required field</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-6" for="password">Password:</label>
+        <div class="col-sm-10">          
+          <input type="password" class="form-control" id="password"  placeholder="Enter password" name="password"[(ngModel)]="user.password" #password="ngModel" required
+          [class.is-invalid]="password.invalid && password.touched">
+          <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
+        </div> 
+      </div>
+
+      
+
+      <button [disabled]="Registerform.form.invalid" type="submit" class="btn btn-info">Register</button>
+      
+      <div class="float-right btextual" (click)="gotologin()">Existing user? Login here</div>
+      
+      
+    </form>
+
+    <br>
+    </div>
+    <br><br><br>
+
+  

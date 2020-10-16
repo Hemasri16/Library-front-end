@@ -1,0 +1,63 @@
+<div class="container" style="max-width: 600px;background-color: azure;">
+    <h3>Update Books</h3>
+    <div [hidden]="submitted" style="width: 400px;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label  class="control-label col-sm-6" for="name"> Book Id</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" required [(ngModel)]="books.bookid" name="bookid"readonly >
+          </div>
+          </div>
+    
+        
+          
+        <div class="form-group">
+          <label  class="control-label col-sm-6" for="name"> Book Name</label>
+          <div class="col-sm-10">
+          <input type="text" class="form-control" id="name" required [(ngModel)]="books.name" name="name"readonly>
+        </div>
+        </div>
+    
+        <div class="form-group">
+          <label class="control-label col-sm-6" for="name">Author</label>
+          <div class="col-sm-10">
+          <input type="text" class="form-control" id="author" required [(ngModel)]="books.author" name="author" readonly>
+        </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-6" for="name">Category</label>
+          <div class="col-sm-10">
+          <input type="text" class="form-control" id="category" required [(ngModel)]="books.category" name="category" readonly>
+        </div>
+        </div>
+    
+        <div class="form-group">
+          <label class="control-label col-sm-6" for="name">Price</label>
+          <div class="col-sm-10">
+          <input type="text" class="form-control" id="price" required [(ngModel)]="books.price" name="price" readonly>
+        </div>
+        </div>
+    
+        <div class="form-group">
+            <label class="control-label col-sm-6"for="name">RackNo</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" id="rackno" required [(ngModel)]="books.rackno" name="rackno" >
+          </div>
+        </div>
+          
+        <div class="form-group">
+            <label c for="name">Status</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" id="status" required [(ngModel)]="books.status" name="status" >
+          </div>
+          </div>
+    
+        <button  type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+    
+    <div [hidden]="!submitted">
+      <h4>You submitted successfully!</h4>
+       <!--<button class="btn btn-success" (click)="newStudent()">Add</button>--> 
+    </div>
+    </div>

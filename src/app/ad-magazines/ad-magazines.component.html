@@ -1,0 +1,40 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Magazines</h2>
+    </div>
+  <!-- nav -->
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/add">Add Magazines</a>
+    </div>
+  </nav>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              
+              <th> Magazine Name</th>
+             <th>Date</th>
+              <th>Rack No</th>
+              <th>Actions</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let magazines of magazines| async">
+               <td>{{magazines.name}}</td>
+               <td>{{magazines.dob | date:'dd-MM-yyyy'}}</td>
+              <td>{{magazines.rackno}}</td>
+              
+
+              <td><button (click)="updateMagazines(magazines.name)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="deleteMagazines(magazines.name)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+
+                   
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
