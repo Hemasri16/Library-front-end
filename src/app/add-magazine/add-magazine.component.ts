@@ -34,6 +34,8 @@ export class AddMagazineComponent implements OnInit {
     error => console.log(error));
   }
 
+
+  
   onSubmit() {
     this.submitted = true;
     this.save();    

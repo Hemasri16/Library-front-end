@@ -12,6 +12,8 @@ import { MagazinesService } from '../magazines.service';
 export class AdMagazinesComponent implements OnInit {
 
   magazines:Observable<Magazines[]>;
+  name='';
+
 
   constructor(private magazinesService:MagazinesService, private router :Router) { }
 
@@ -23,6 +25,17 @@ export class AdMagazinesComponent implements OnInit {
     this.magazines = this.magazinesService.getMagazinesList();
   }
 
+  searchName(): void {
+    this.magazinesService.findByName(this.name)
+      .subscribe(
+        data => {
+          this.magazines = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+  }
   deleteMagazines(name: string) {
     this.magazinesService.deleteMagazines(name)
       .subscribe(
