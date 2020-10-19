@@ -33,7 +33,5 @@ export class MagazinesService {
     return this.http.get(`${this.baseUrl}`);
   }
 
-  findByName(name): Observable<any> {
-    return this.http.get(`${this.baseUrl}?name=${name}`);
-  }
+ 
 }
