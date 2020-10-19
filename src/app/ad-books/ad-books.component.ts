@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from "rxjs";
 import { Abooks } from '../abooks';
@@ -14,23 +14,37 @@ import { Books } from '../books';
 export class AdBooksComponent implements OnInit {
 
   books:Observable<Books[]>;
+  dtOptions: DataTables.Settings = {};
+  @ViewChild('dtOptions', {static: true}) table;
+  AdBooksService: any;
 
-  constructor(private adbooksService:AdBooksService, private router :Router) { }
-
-  ngOnInit() {
-    this.reloadData();
+  constructor(private abooksService:AdBooksService, private router :Router) { 
+    
+      setTimeout(function(){
+        $(function(){
+          $('#example').DataTable();
+      });
+      },2000);
+      
+    
   }
 
-  reloadData() {
-    this.books = this.adbooksService.getBooksList();
+  ngOnInit() {
+    
+    this.books = this.abooksService.getBooksList();
+    setTimeout(function(){
+      $(function(){
+        $('#example').DataTable();
+    });
+    },2000);
   }
 
   deleteBooks(id: number) {
-    this.adbooksService.deleteBooks(id)
+    this.abooksService.deleteBooks(id)
       .subscribe(
         data => {
           console.log(data);
-          this.reloadData();
+          this.books=this.AdBooksService.getBooks();
         },
         error => console.log(error));
       }
