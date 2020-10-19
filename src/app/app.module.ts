@@ -20,11 +20,14 @@ import { AdBooksComponent } from './ad-books/ad-books.component';
 import { AddBooksComponent } from './add-books/add-books.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { NewspapersComponent } from './newspapers/newspapers.component';
-import { LogoutComponent } from './logout/logout.component';
+
 import { BooksDetailsComponent } from './books-details/books-details.component';
 import { AdMagazinesComponent } from './ad-magazines/ad-magazines.component';
 import { UpdateMagazineComponent } from './update-magazine/update-magazine.component';
 import { AddMagazineComponent } from './add-magazine/add-magazine.component';
+import { AdnewspapersComponent } from './adnewspapers/adnewspapers.component';
+import { DataTablesModule } from 'angular-datatables';
+import { ApiResponseComponent } from './api-response/api-response.component';
 
 
 
@@ -46,11 +49,13 @@ import { AddMagazineComponent } from './add-magazine/add-magazine.component';
     AddBooksComponent,
     AdminHomeComponent,
     NewspapersComponent,
-    LogoutComponent,
+  
     BooksDetailsComponent,
     AdMagazinesComponent,
     UpdateMagazineComponent,
     AddMagazineComponent,
+    AdnewspapersComponent,
+    ApiResponseComponent,
     
   
     
@@ -61,7 +66,8 @@ import { AddMagazineComponent } from './add-magazine/add-magazine.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

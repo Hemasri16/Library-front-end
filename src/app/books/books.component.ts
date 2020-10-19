@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from "rxjs";
 import { BooksService } from "../books.service";
 import { Books } from "../books";
@@ -13,15 +13,26 @@ import { Router } from '@angular/router';
 })
 export class BooksComponent implements OnInit {
   books:Observable<Books[]>;
+  dtOptions: DataTables.Settings = {};
+  @ViewChild('dtOptions', {static: true}) table;
 
-  constructor(private booksService:BooksService, private router :Router) { }
+  constructor(private booksService:BooksService, private router :Router) {
+    setTimeout(function(){
+      $(function(){
+        $('#example').DataTable();
+    });
+    },2000);
+   }
 
   ngOnInit() {
-    this.reloadData();
-  }
 
-  reloadData() {
     this.books = this.booksService.getBooksList();
+    setTimeout(function(){
+      $(function(){
+        $('#example').DataTable();
+    });
+    },2000);
+
   }
   
   

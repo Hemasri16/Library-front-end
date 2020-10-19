@@ -11,15 +11,17 @@ import { PageComponent } from './page/page.component';
 import { AdminComponent } from './admin/admin.component';
 import { MagazinesComponent } from './magazines/magazines.component';
 
+
 import { AdBooksComponent } from './ad-books/ad-books.component';
 import { AddBooksComponent } from './add-books/add-books.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { NewspapersComponent } from './newspapers/newspapers.component';
-import { LogoutComponent } from './logout/logout.component';
+
 import { BooksDetailsComponent } from './books-details/books-details.component';
 import { AdMagazinesComponent } from './ad-magazines/ad-magazines.component';
 import { UpdateMagazineComponent } from './update-magazine/update-magazine.component';
 import { AddMagazineComponent } from './add-magazine/add-magazine.component';
+import { AdnewspapersComponent } from './adnewspapers/adnewspapers.component';
 
 
 
@@ -39,7 +41,7 @@ const routes: Routes = [
   {path:'books-details/:id',component:BooksDetailsComponent},
   {path:'add-books',component:AddBooksComponent},
   {path:'add',component:AddMagazineComponent},
-  {path:'logout',component:LogoutComponent},
+  {path:'adnewspapers',component:AdnewspapersComponent},
   {path:'home',component:HomeComponent},
   
 ];
