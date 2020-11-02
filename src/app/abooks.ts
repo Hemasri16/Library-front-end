@@ -5,5 +5,5 @@ export class Abooks {
     name: string;
     price: number;
     rackno:number;
-    status:string;   
+    quantity:number;   
     }

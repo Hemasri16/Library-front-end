@@ -34,6 +34,7 @@ updateMagazines() {
       this.magazines = new Magazines();
       this.gotoList();
     }, error => console.log(error));
+    alert("Updated Successfully");
 }
 
 

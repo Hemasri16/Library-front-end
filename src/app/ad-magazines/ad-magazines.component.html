@@ -6,7 +6,7 @@
   <!-- nav -->
   <nav class="navbar navbar-expand navbar-dark bg-dark">
     <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/add">Add Magazines</a>
+        <!--<a class="nav-item nav-link" routerLink="/add">Add Magazines</a>-->
     </div>
   </nav>
 
@@ -14,13 +14,15 @@
  
 
       <div class="panel-body">
-        <table class="table table-striped">
+        <table id="example" class="table table-striped table-bordered table-sm row-border hover" cellspacing="0" width="100%">
           <thead>
             <tr>
               
               <th> Magazine Name</th>
-             <th>Date</th>
+             <th> Publish Date</th>
               <th>Rack No</th>
+              <th>Pages</th>
+              <th>Price</th>
               <th>Actions</th>
               
             </tr>
@@ -30,6 +32,9 @@
                <td>{{magazines.name}}</td>
                <td>{{magazines.dob | date:'dd-MM-yyyy'}}</td>
               <td>{{magazines.rackno}}</td>
+              <td>{{magazines.pages}}</td>
+              <td>{{magazines.price}}</td>
+              
               
 
               <td><button (click)="updateMagazines(magazines.name)" class="btn btn-info" style="margin-left: 10px">Update</button>

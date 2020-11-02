@@ -26,6 +26,7 @@ export class AdBooksService {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
 
+  
   deleteBooks(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
   }

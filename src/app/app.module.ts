@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {  HttpClientModule } from '@angular/common/http';
 
@@ -12,8 +12,8 @@ import { HomeComponent } from './home/home.component';
 
 import { BooksComponent } from './books/books.component';
 import { UpdateBooksComponent } from './update-books/update-books.component';
-import { PageComponent } from './page/page.component';
-import { AdminComponent } from './admin/admin.component';
+
+
 import { MagazinesComponent } from './magazines/magazines.component';
 
 import { AdBooksComponent } from './ad-books/ad-books.component';
@@ -25,9 +25,26 @@ import { BooksDetailsComponent } from './books-details/books-details.component';
 import { AdMagazinesComponent } from './ad-magazines/ad-magazines.component';
 import { UpdateMagazineComponent } from './update-magazine/update-magazine.component';
 import { AddMagazineComponent } from './add-magazine/add-magazine.component';
-import { AdnewspapersComponent } from './adnewspapers/adnewspapers.component';
+
 import { DataTablesModule } from 'angular-datatables';
-import { ApiResponseComponent } from './api-response/api-response.component';
+
+
+import { TakeBookComponent } from './take-book/take-book.component';
+import { IssuedbooksComponent } from './issuedbooks/issuedbooks.component';
+import { NewspapersAdminComponent } from './newspapers-admin/newspapers-admin.component';
+import { AddNewspaperComponent } from './add-newspaper/add-newspaper.component';
+import { UpdateNewspaperComponent } from './update-newspaper/update-newspaper.component';
+import { ViewRegisteredusersComponent } from './view-registeredusers/view-registeredusers.component';
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
+import { AdminIssuedbooksComponent } from './admin-issuedbooks/admin-issuedbooks.component';
+
+
+
+
+
+
+
 
 
 
@@ -35,14 +52,14 @@ import { ApiResponseComponent } from './api-response/api-response.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
+  
     RegistrationComponent,
     HomeComponent,
     
     BooksComponent,
     UpdateBooksComponent,
-    PageComponent,
-    AdminComponent,
+  
+    
     MagazinesComponent,
 
     AdBooksComponent,
@@ -54,8 +71,35 @@ import { ApiResponseComponent } from './api-response/api-response.component';
     AdMagazinesComponent,
     UpdateMagazineComponent,
     AddMagazineComponent,
-    AdnewspapersComponent,
-    ApiResponseComponent,
+
+    
+  
+    
+    TakeBookComponent,
+    IssuedbooksComponent,
+    NewspapersAdminComponent,
+    AddNewspaperComponent,
+    UpdateNewspaperComponent,
+    
+    ViewRegisteredusersComponent,
+    
+    AdminComponent,
+    
+    LoginComponent,
+    
+    AdminIssuedbooksComponent,
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+  
+  
     
   
     

@@ -1,42 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
- 
-  
-</head>
-<body>
- 
-<div class="container">
-  <h2>Magazines</h2>
-  <a href="http://www.indiatoday.in" target="_blank"><button style="margin-right:30px; width: 18%;" type="button" class="btn btn-info">India Today</button></a>
-  <a href="http://www.femina.in" target="_blank"><button style="margin-right:30px; width: 18%;" type="button" class="btn btn-success">Femina</button></a>
-  <a href="http://www.businesstoday.in" target="_blank"><button style="margin-right:30px; width: 18%;" type="button" class="btn btn-warning">Business Today</button></a>
-  <a href="http://www.vogue.in" target="_blank"><button style="margin-right:30px; width: 18%;" type="button" class="btn btn-primary">Vogue</button></a><br><br>
- 
-  <a href="http://www.womensera.in" target="_blank"><button style="margin-right:30px; width: 18%; background-color: red;" type="button" class="btn btn-primary">Women's Era</button></a>
-  <a href="http://www.rsjonline.in" target="_blank"><button style="margin-right:30px; width: 18%; background-color: blueviolet; color: white;" type="button" class="btn btn-warning">Rock Street Journal</button></a>
-  <a href="http://www.filmfare.in" target="_blank"><button  style="margin-right:30px; width: 18%; background-color: hotpink;" type="button" class="btn btn-success">Filmfare</button></a>
-  <a href="http://www.forbesindia.in" target="_blank"><button style="margin-right:30px; width: 18%;" type="button" class="btn btn-info">Forbes India</button></a><br><br>
- 
-  <a href="http://www.digit.in" target="_blank"><button style="margin-right:30px; width: 18%; background-color: purple; color: white;" type="button" class="btn btn-warning">Digit</button></a>
-  <a href="http://www.theweek.in" target="_blank"><button style="margin-right:30px; width: 18%; background-color: royalblue;" type="button" class="btn btn-primary">The Week</button></a>
-  <a href="http://www.outlookindia.com" target="_blank"><button style="margin-right:30px; width: 18%;" type="button" class="btn btn-info">OutLook</button></a>
-  <a href="http://www.newwomanindia.com" target="_blank"><button style="margin-right:30px; width: 18%;" type="button" class="btn btn-success">New Woman</button></a><br><br>
-</div>
- 
-</body>
 
-<div class="container">                
-  <a routerLink="/home"><button style="margin-right: 2%;" class="btn btn-success">Previous</button></a>
-  <a routerLink="/newspapers"><button style="margin-right: 3%;" class="btn btn-success">Next</button></a>
-  <!--<a routerLink="/category" href="javascript:void(0);" class="btn btn-success">Previous</a><br><br><br>
-  <a routerLink="/localsearch" href="javascript:void(0);" class="btn btn-success">Next</a>-->
-</div>
-</html>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Magazines</h2>
+  </div>
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="navbar-nav">
+      <!--<a class="nav-item nav-link" routerLink="/add">Add Magazines</a>-->
+  </div>
+</nav>
+
+
+
+
+    <div class="panel-body">
+      <table id="example" class="table table-striped table-bordered table-sm row-border hover" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            
+            <th> Magazine Name</th>
+           <th> Publish Date</th>
+            <th>Rack No</th>
+            <th>Pages</th>
+            <th>Price</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let magazines of magazines| async">
+             <td>{{magazines.name}}</td>
+             <td>{{magazines.dob | date:'dd-MM-yyyy'}}</td>
+            <td>{{magazines.rackno}}</td>
+            <td>{{magazines.pages}}</td>
+            <td>{{magazines.price}}</td>
+            
+            
+
+            <!--<td><button (click)="updateMagazines(magazines.name)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="deleteMagazines(magazines.name)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+
+                 
+            </td>-->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container">                
+      <a routerLink="/home"><button style="margin-right: 2%;" class="btn btn-success">Previous</button></a>
+      <!--<a routerLink="/newspapers"><button style="margin-right: 3%;" class="btn btn-success">Next</button></a>-->
+      <!--<a routerLink="/category" href="javascript:void(0);" class="btn btn-success">Previous</a><br><br><br>
+      <a routerLink="/localsearch" href="javascript:void(0);" class="btn btn-success">Next</a>-->
+  </div>
+  </div>

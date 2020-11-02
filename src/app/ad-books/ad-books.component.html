@@ -8,7 +8,7 @@
     <div class="navbar-nav">
       
         
-        <a class="nav-item nav-link" routerLink="/add-books">Add Books</a>
+        <!--<a class="nav-item nav-link" routerLink="/add-books">Add Books</a>-->
     </div>
   </nav>
       <div class="panel-body">
@@ -21,7 +21,7 @@
               <th>Category</th>
               <th>Price</th>
               <th>Rackno</th>
-              <th>Status</th>
+              <th>Quantity</th>
               <th>Actions</th>
               
             </tr>
@@ -34,7 +34,7 @@
               <td>{{books.category}}</td>
               <td>{{books.price}}</td>
               <td>{{books.rackno}}</td>
-              <td>{{books.status}}</td>
+              <td>{{books.quantity}}</td>
 
               <td><button (click)="updateBooks(books.bookid)" class="btn btn-info" style="margin-left: 10px">Update</button>
                 <button (click)="deleteBooks(books.bookid)" class="btn btn-danger" style="margin-left: 10px">Delete</button>

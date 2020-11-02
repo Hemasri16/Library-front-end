@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ApiResponseComponent } from './api-response.component';
+import { TakeBookComponent } from './take-book.component';
 
-describe('ApiResponseComponent', () => {
-  let component: ApiResponseComponent;
-  let fixture: ComponentFixture<ApiResponseComponent>;
+describe('TakeBookComponent', () => {
+  let component: TakeBookComponent;
+  let fixture: ComponentFixture<TakeBookComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ApiResponseComponent ]
+      declarations: [ TakeBookComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ApiResponseComponent);
+    fixture = TestBed.createComponent(TakeBookComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

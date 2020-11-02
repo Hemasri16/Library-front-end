@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     
   })
 }
-a
+
 
   loginUser(){
     this._service.loginUserFromRemote(this.user).subscribe(

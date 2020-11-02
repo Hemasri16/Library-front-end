@@ -32,6 +32,7 @@ export class AddMagazineComponent implements OnInit {
       this.gotoList();
     }, 
     error => console.log(error));
+    alert("Success")
   }
 
 

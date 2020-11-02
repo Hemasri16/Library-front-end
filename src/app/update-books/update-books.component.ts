@@ -36,6 +36,7 @@ updateBooks() {
       this.books = new Books();
       this.gotoList();
     }, error => console.log(error));
+    alert ("Updated Successfully")
 }
 
 
@@ -43,6 +44,7 @@ updateBooks() {
 onSubmit() {
   this.updateBooks();
   this.submitted=true;
+  
 }
 
 gotoList() {

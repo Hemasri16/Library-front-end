@@ -1,0 +1,55 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2> Issued Books</h2>
+    </div>
+
+
+    
+  <!-- nav -->
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav">
+      
+        
+        <!--<a class="nav-item nav-link" routerLink="/add-books">Add Boks</a>-->
+    </div>
+  </nav>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              
+              
+              <th>Book Number</th>
+              <th>Book Title</th>
+              <th>Book Author</th>
+            
+
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let issued_book of issued_books | async">
+              <td>{{issued_book.book_number}}</td>
+              <td>{{issued_book.book_title}}</td>
+              <td>{{issued_book.book_author}}</td>
+          
+              
+              
+
+              <!--<td><button (click)="deleteIssued_Book(issued_book.issueid)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+                   
+              </td>-->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="container">                
+        <a routerLink="/home"><button style="margin-right: 2%;" class="btn btn-success">Previous</button></a>
+        <!--<a routerLink="/magazines"><button style="margin-right: 3%;" class="btn btn-success">Next</button></a>-->
+        <!--<a routerLink="/category" href="javascript:void(0);" class="btn btn-success">Previous</a><br><br><br>
+        <a routerLink="/localsearch" href="javascript:void(0);" class="btn btn-success">Next</a>-->
+    </div>
+
+    
+    </div>

@@ -39,7 +39,11 @@ export class BooksComponent implements OnInit {
   booksDetails(id: number){
     this.router.navigate(['books-details', id]);
   }
+
+  takeBooks(id: number){
+    this.router.navigate(['take-abooks', id]);
   }
+}
   
   
   

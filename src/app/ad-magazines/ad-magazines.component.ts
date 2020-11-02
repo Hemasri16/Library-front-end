@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Magazines } from '../magazines';
@@ -12,30 +12,42 @@ import { MagazinesService } from '../magazines.service';
 export class AdMagazinesComponent implements OnInit {
 
   magazines:Observable<Magazines[]>;
+  dtOptions: DataTables.Settings = {};
+  @ViewChild('dtOptions', {static: true}) table;
+  MagazinesService: any;
+  
 
-
-
-  constructor(private magazinesService:MagazinesService, private router :Router) { }
+  constructor(private magazinesService:MagazinesService, private router :Router) { 
+    
+      setTimeout(function(){
+        $(function(){
+          $('#example').DataTable();
+      });
+      },2000);
+      
+    
+  }
 
   ngOnInit() {
-    this.reloadData();
-  }
-
-  reloadData() {
+    
     this.magazines = this.magazinesService.getMagazinesList();
+    setTimeout(function(){
+      $(function(){
+        $('#example').DataTable();
+    });
+    },2000);
   }
-
 
   deleteMagazines(name: string) {
     this.magazinesService.deleteMagazines(name)
       .subscribe(
         data => {
           console.log(data);
-          this.reloadData();
+          this.magazines=this.MagazinesService.getMagazines();
         },
         error => console.log(error));
+        alert ("Delete")
       }
-      
       
   updateMagazines(name: string){
     this.router.navigate(['update', name]);
@@ -45,4 +57,3 @@ export class AdMagazinesComponent implements OnInit {
   
   
   
-

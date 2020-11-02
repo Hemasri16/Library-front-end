@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from '../user';
-import { UserService } from '../user.service';
+import { Admin } from '../admin';
+import { AdminService } from '../admin.service';
+
+
 
 @Component({
   selector: 'app-admin',
@@ -12,11 +14,11 @@ import { UserService } from '../user.service';
 export class AdminComponent implements OnInit {
 
   imgUrl="assets/image/pexels-rafael-cosquiere-2041540.jpg";
-   user=new User();
+   admin=new Admin();
    msg='';
   myForm: FormGroup;
 
-  constructor(private _service : UserService ,private _router: Router) { }
+  constructor(private _service : AdminService ,private _router: Router) { }
 
   ngOnInit(): void {
 
@@ -29,8 +31,8 @@ export class AdminComponent implements OnInit {
 }
 a
 
-  loginUser(){
-    this._service.loginUserFromRemote(this.user).subscribe(
+  AdminUser(){
+    this._service.AdminUserFromRemote(this.admin).subscribe(
       data=>{console.log("response received");
       this._router.navigate(['/admin-home'])
     },
@@ -42,8 +44,6 @@ a
     )
 
   }
- gotoregistration(){
-  this._router.navigate(['/registration'])
+ 
   
  }
-}

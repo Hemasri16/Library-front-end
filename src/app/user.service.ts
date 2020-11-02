@@ -6,9 +6,8 @@ import { User } from './user';
 @Injectable({
   providedIn: 'root'
 })
+export class UserService {
 
-
-export class UserService {  
   
   private baseUrl = 'http://localhost:8080/library-rest/api/user';  
   
@@ -17,10 +16,11 @@ export class UserService {
   public loginUserFromRemote(user :User):Observable<any>{
     return this.http.post<any>("http://localhost:8080/library-rest/api/login", user);
   }
+  
   public registerUserFromRemote(user :User):Observable<any>{
-    return this.http.post<any>("http://localhost:8080/library-rest/api/registeruser", user);
+    return this.http.post<any>("http://localhost:8080/library-rest/api/user", user);
   }
-
+  
   
   getUser(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);

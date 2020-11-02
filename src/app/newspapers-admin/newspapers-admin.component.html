@@ -1,0 +1,55 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Newspaper</h2>
+    </div>
+  <!-- nav -->
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav">
+        <!--<a class="nav-item nav-link" routerLink="/add-newspaper">Add Newspaper</a>-->
+    </div>
+  </nav>
+
+  
+ 
+
+      <div class="panel-body">
+        <table id="example" class="table table-striped table-bordered table-sm row-border hover" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              
+              <th>Newspaper Name</th>
+             <th> Publish Date</th>
+              <th>Language</th>
+              <th>Pages</th>
+              <th>Price</th>
+              <th>Actions</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let newspaper of newspaper| async">
+               <td>{{newspaper.name}}</td>
+               <td>{{newspaper.dob | date:'dd-MM-yyyy'}}</td>
+              <td>{{newspaper.language}}</td>
+              <td>{{newspaper.pages}}</td>
+              <td>{{newspaper.price}}</td>
+              
+              
+
+              <td><button (click)="updateNewspaper(newspaper.name)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="deleteNewspaper(newspaper.name)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+
+                   
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container">                
+        <a routerLink="/admin-home"><button style="margin-right: 2%;" class="btn btn-success">Previous</button></a>
+        <a routerLink="/issued-books"><button style="margin-right: 3%;" class="btn btn-success">Next</button></a>
+        <!--<a routerLink="/category" href="javascript:void(0);" class="btn btn-success">Previous</a><br><br><br>
+        <a routerLink="/localsearch" href="javascript:void(0);" class="btn btn-success">Next</a>-->
+    </div>
+    </div>

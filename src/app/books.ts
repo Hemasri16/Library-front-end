@@ -1,9 +1,12 @@
 export class Books {
-    bookid: number;
-    author:string;
-    category:string;
-    name: string;
-    price: number;
+    bookid:number;
+    name :String;
+    author :String;
+    category:String;
+    price:String;
     rackno:number;
-    status:string;   
-    }
+    quantity:number;
+    user_id:number;
+    issueddob:Date;
+    username:string;
+}

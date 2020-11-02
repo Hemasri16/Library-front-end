@@ -47,6 +47,7 @@ export class AdBooksComponent implements OnInit {
           this.books=this.AdBooksService.getBooks();
         },
         error => console.log(error));
+        alert ("Delete")
       }
       
   updateBooks(id: number){

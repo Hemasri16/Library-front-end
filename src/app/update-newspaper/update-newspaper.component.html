@@ -1,0 +1,25 @@
+
+
+
+<div class="container" style="max-width: 600px;background-color: azure;">
+    <h3>Update Newspaper</h3>
+    <div [hidden]="submitted" style="width: 400px;">
+      <form (ngSubmit)="onSubmit()">
+        
+      <div class="form-group">
+        <label class="control-label col-sm-6"for="name">Price</label>
+        <div class="col-sm-10">
+        <input type="text" class="form-control" id="price" required [(ngModel)]="newspaper.price" name="price" >
+      </div>
+    </div>
+       
+    
+        <button  type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+    
+    <div [hidden]="!submitted">
+      <h4>You submitted successfully!</h4>
+       <!--<button class="btn btn-success" (click)="newStudent()">Add</button>--> 
+    </div>
+    </div>

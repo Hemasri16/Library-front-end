@@ -1,39 +1,79 @@
 
-
-
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.php">Library Management System(LMS)</a>
+			</div>
+			
+			<ul class="nav navbar-nav navbar-right">
+				
+				<li class="nav-item"><a class="nav-link" href="login">Logout</a></li>
+			</ul>
+        </div>
         
+    </nav><br>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-center">
+            
+              
+                <li class="nav-item">
+                    <a href="take-abooks" class="nav-link">Issue Book</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+	<span><marquee>This is library Management System. Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
+	<div class="row">
 
-        <html>
-            <head>
-                <meta charset="utf-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1">
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-            </head>
-            <body>
-                <div class="sidenav">
-                    
-                    <a routerLink="/books">Books</a>
-                    <a routerLink="/magazines">Magazines</a>
-                    <a routerLink="/newspapers">News Papers</a>
-                    <a routerLink="/">Logout</a>
+        <div class="col-md-3">
+            <div class="card bg-light" style="width: 300px">
+                <div class="card-header">Total Books:</div>
+                <div class="card-body">
+                    <p class="card-text">No. of total Books:18</p>
+                    <a href="books" class="btn btn-primary" target="_blank">View All Books</a>
                 </div>
-
-                
-                <div class="container">
-                  
-                
-                    
-                
-                      <div class="item">
-                        <img src="assets/image/janko-ferlic-sfL_QOnmy00-unsplash.jpg" alt="Books World" style="width:110%;">
-                      </div>
-                      </div>
-                    
-                      
-                      
-                    
-            </body>
-        </html>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-light" style="width: 300px">
+                <div class="card-header">Magazines:</div>
+                <div class="card-body">
+                    <p class="card-text">No. of Magazines:10 </p>
+                    <a href="magazines" class="btn btn-info" target="_blank">View Magazines</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-light" style="width: 300px">
+                <div class="card-header">Newspapers:</div>
+                <div class="card-body">
+                    <p class="card-text">No. of Newspapers: 10</p>
+                    <a href="newspapers" class="btn btn-primary" target="_blank">View Newspapers</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-light" style="width: 300px">
+                <div class="card-header">Books Issued:</div>
+                <div class="card-body">
+                    <p class="card-text">No. Issued Books:2</p>
+                    <a href="issued-books" class="btn btn-success" target="_blank">View Issued books</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-3">
+            <div class="card bg-light" style="width: 300px">
+                <div class="card-header">Book Not Returned:</div>
+                <div class="card-body">
+                    <p class="card-text">No. of books not returned:2</p>
+                    <a href="" class="btn btn-info" target="_blank">View Not Returned Books</a>
+                </div>
+            </div>
+        </div>
+		<div class="col-md-3"></div>
+		<div class="col-md-3"></div>
+		<div class="col-md-3"></div>
+	</div>

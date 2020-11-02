@@ -1,0 +1,85 @@
+
+
+
+
+
+<div class="container" style="max-width: 600px; background-color:lightblue;">
+   
+
+    <h3>Issue Books</h3>
+    <div [hidden]="submitted" style="width: 400px;">
+      <form (ngSubmit)="onSubmit()"> 
+        
+        <div class="form-group">
+          <label class="control-label col-sm-6" for="book_number">Book Number:</label>
+          <div class="col-sm-10">
+            <input type="book_number" class="form-control" id="book_number"placeholder="Enter Book Number" name="book_number"  [(ngModel)]="issued_book.book_number" required #book_number="ngModel"
+            [class.is-invalid]="book_number.invalid && book_number.touched">
+            <small class="text-danger" [class.d-none]="book_number.valid || book_number.untouched">Book Number is required field</small>
+          </div>
+        </div>
+
+     
+    <div class="form-group">
+      <label class="control-label col-sm-6" for="book_title">Book Title:</label>
+      <div class="col-sm-10">
+        <input type="book_title" class="form-control" id="book_title"placeholder="Enter Book Title" name="book_title"  [(ngModel)]="issued_book.book_title" required #book_title="ngModel"
+        [class.is-invalid]="book_title.invalid && book_title.touched">
+        <small class="text-danger" [class.d-none]="book_title.valid || book_title.untouched">Book Title is required field</small>
+      </div>
+    </div>
+
+      
+    <!--<div class="form-group">
+      <label class="control-label col-sm-6" for="username">Author:</label>
+      <div class="col-sm-10">
+        <input type="author" class="form-control" id="author"placeholder="Enter Author" name="author"  [(ngModel)]="issued_book.book_author" required #author="ngModel"
+        [class.is-invalid]="author.invalid && author.touched">
+        <small class="text-danger" [class.d-none]="author.valid || author.untouched">Author is required field</small>
+      </div>
+    </div>-->
+    <div class="form-group">
+      <label for="author">Author</label>
+      <select id="author" name="author" [(ngModel)]="authors"
+              class="form-control">
+        <option *ngFor="let author of authors" [value]="author.id">
+          {{author.name}}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-6" for="issueddob">Issued Date:</label>
+      <div class="col-sm-10">
+        <input type="issueddob" class="form-control" id="issueddob"placeholder="Enter Date" name="issueddob"  [(ngModel)]="issued_book.issueddob" required #issueddob="ngModel"
+        [class.is-invalid]="issueddob.invalid && issueddob.touched">
+        <small class="text-danger" [class.d-none]="issueddob.valid ||issueddob.untouched">Issued Date is required field</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-6" for="userid">User Id:</label>
+      <div class="col-sm-10">
+        <input type="userid" class="form-control" id="userid"placeholder="Enter User ID" name="userid"  [(ngModel)]="issued_book.user_id" required #userid="ngModel"
+        [class.is-invalid]="userid.invalid && userid.touched">
+        <small class="text-danger" [class.d-none]="userid.valid || userid.untouched">Userid is required field</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-6" for="username">Username:</label>
+      <div class="col-sm-10">
+        <input type="username" class="form-control" id="username"placeholder="Enter username" name="username"  [(ngModel)]="issued_book.username" required #username="ngModel"
+        [class.is-invalid]="username.invalid && username.touched">
+        <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is required field</small>
+      </div>
+    </div>
+    
+        <button  type="issuebook" class="btn btn-success">Issue Book</button>
+      </form>
+    </div>
+    
+    <div [hidden]="!submitted">
+      <h4>You submitted successfully!</h4>
+       <!--<button class="btn btn-success" (click)="newStudent()">Add</button>-->
+    </div>
+    </div>
